@@ -1,0 +1,86 @@
+Starting Envoy.
+[2020-10-09 15:39:46.975][1][warning][runtime] [source/common/runtime/runtime_features.cc:20] Unable to use runtime singleton for feature envoy.reloadable_features.activate_fds_next_event_loop
+[2020-10-09 15:39:46.975][1][info][main] [source/server/server.cc:295] initializing epoch 0 (base id=0, hot restart version=11.104)
+[2020-10-09 15:39:46.975][1][info][main] [source/server/server.cc:297] statically linked extensions:
+[2020-10-09 15:39:46.975][1][info][main] [source/server/server.cc:299]   envoy.upstreams: envoy.filters.connection_pools.http.generic, envoy.filters.connection_pools.http.http, envoy.filters.connection_pools.http.tcp
+[2020-10-09 15:39:46.975][1][info][main] [source/server/server.cc:299]   envoy.resolvers: envoy.ip
+[2020-10-09 15:39:46.975][1][info][main] [source/server/server.cc:299]   envoy.retry_priorities: envoy.retry_priorities.previous_priorities
+[2020-10-09 15:39:46.975][1][info][main] [source/server/server.cc:299]   envoy.retry_host_predicates: envoy.retry_host_predicates.omit_canary_hosts, envoy.retry_host_predicates.omit_host_metadata, envoy.retry_host_predicates.previous_hosts
+[2020-10-09 15:39:46.975][1][info][main] [source/server/server.cc:299]   envoy.filters.network: envoy.client_ssl_auth, envoy.echo, envoy.ext_authz, envoy.filters.network.client_ssl_auth, envoy.filters.network.direct_response, envoy.filters.network.dubbo_proxy, envoy.filters.network.echo, envoy.filters.network.ext_authz, envoy.filters.network.http_connection_manager, envoy.filters.network.kafka_broker, envoy.filters.network.local_ratelimit, envoy.filters.network.mongo_proxy, envoy.filters.network.mysql_proxy, envoy.filters.network.postgres_proxy, envoy.filters.network.ratelimit, envoy.filters.network.rbac, envoy.filters.network.redis_proxy, envoy.filters.network.rocketmq_proxy, envoy.filters.network.sni_cluster, envoy.filters.network.sni_dynamic_forward_proxy, envoy.filters.network.tcp_proxy, envoy.filters.network.thrift_proxy, envoy.filters.network.zookeeper_proxy, envoy.http_connection_manager, envoy.mongo_proxy, envoy.ratelimit, envoy.redis_proxy, envoy.tcp_proxy
+[2020-10-09 15:39:46.975][1][info][main] [source/server/server.cc:299]   envoy.dubbo_proxy.filters: envoy.filters.dubbo.router
+[2020-10-09 15:39:46.975][1][info][main] [source/server/server.cc:299]   envoy.dubbo_proxy.route_matchers: default
+[2020-10-09 15:39:46.975][1][info][main] [source/server/server.cc:299]   envoy.thrift_proxy.transports: auto, framed, header, unframed
+[2020-10-09 15:39:46.975][1][info][main] [source/server/server.cc:299]   envoy.transport_sockets.upstream: envoy.transport_sockets.alts, envoy.transport_sockets.quic, envoy.transport_sockets.raw_buffer, envoy.transport_sockets.tap, envoy.transport_sockets.tls, raw_buffer, tls
+[2020-10-09 15:39:46.975][1][info][main] [source/server/server.cc:299]   envoy.clusters: envoy.cluster.eds, envoy.cluster.logical_dns, envoy.cluster.original_dst, envoy.cluster.static, envoy.cluster.strict_dns, envoy.clusters.aggregate, envoy.clusters.dynamic_forward_proxy, envoy.clusters.redis
+[2020-10-09 15:39:46.975][1][info][main] [source/server/server.cc:299]   envoy.thrift_proxy.filters: envoy.filters.thrift.rate_limit, envoy.filters.thrift.router
+[2020-10-09 15:39:46.975][1][info][main] [source/server/server.cc:299]   envoy.resource_monitors: envoy.resource_monitors.fixed_heap, envoy.resource_monitors.injected_resource
+[2020-10-09 15:39:46.975][1][info][main] [source/server/server.cc:299]   envoy.thrift_proxy.protocols: auto, binary, binary/non-strict, compact, twitter
+[2020-10-09 15:39:46.975][1][info][main] [source/server/server.cc:299]   envoy.filters.listener: envoy.filters.listener.http_inspector, envoy.filters.listener.original_dst, envoy.filters.listener.original_src, envoy.filters.listener.proxy_protocol, envoy.filters.listener.tls_inspector, envoy.listener.http_inspector, envoy.listener.original_dst, envoy.listener.original_src, envoy.listener.proxy_protocol, envoy.listener.tls_inspector
+[2020-10-09 15:39:46.975][1][info][main] [source/server/server.cc:299]   envoy.dubbo_proxy.serializers: dubbo.hessian2
+[2020-10-09 15:39:46.975][1][info][main] [source/server/server.cc:299]   envoy.tracers: envoy.dynamic.ot, envoy.lightstep, envoy.tracers.datadog, envoy.tracers.dynamic_ot, envoy.tracers.lightstep, envoy.tracers.opencensus, envoy.tracers.xray, envoy.tracers.zipkin, envoy.zipkin
+[2020-10-09 15:39:46.975][1][info][main] [source/server/server.cc:299]   envoy.stats_sinks: envoy.dog_statsd, envoy.metrics_service, envoy.stat_sinks.dog_statsd, envoy.stat_sinks.hystrix, envoy.stat_sinks.metrics_service, envoy.stat_sinks.statsd, envoy.statsd
+[2020-10-09 15:39:46.975][1][info][main] [source/server/server.cc:299]   envoy.health_checkers: envoy.health_checkers.redis
+[2020-10-09 15:39:46.975][1][info][main] [source/server/server.cc:299]   envoy.grpc_credentials: envoy.grpc_credentials.aws_iam, envoy.grpc_credentials.default, envoy.grpc_credentials.file_based_metadata
+[2020-10-09 15:39:46.975][1][info][main] [source/server/server.cc:299]   envoy.access_loggers: envoy.access_loggers.file, envoy.access_loggers.http_grpc, envoy.access_loggers.tcp_grpc, envoy.file_access_log, envoy.http_grpc_access_log, envoy.tcp_grpc_access_log
+[2020-10-09 15:39:46.975][1][info][main] [source/server/server.cc:299]   envoy.filters.udp_listener: envoy.filters.udp.dns_filter, envoy.filters.udp_listener.udp_proxy
+[2020-10-09 15:39:46.975][1][info][main] [source/server/server.cc:299]   envoy.compression.decompressor: envoy.compression.gzip.decompressor
+[2020-10-09 15:39:46.975][1][info][main] [source/server/server.cc:299]   envoy.filters.http: envoy.buffer, envoy.cors, envoy.csrf, envoy.ext_authz, envoy.fault, envoy.filters.http.adaptive_concurrency, envoy.filters.http.admission_control, envoy.filters.http.aws_lambda, envoy.filters.http.aws_request_signing, envoy.filters.http.buffer, envoy.filters.http.cache, envoy.filters.http.compressor, envoy.filters.http.cors, envoy.filters.http.csrf, envoy.filters.http.decompressor, envoy.filters.http.dynamic_forward_proxy, envoy.filters.http.dynamo, envoy.filters.http.ext_authz, envoy.filters.http.fault, envoy.filters.http.grpc_http1_bridge, envoy.filters.http.grpc_http1_reverse_bridge, envoy.filters.http.grpc_json_transcoder, envoy.filters.http.grpc_stats, envoy.filters.http.grpc_web, envoy.filters.http.gzip, envoy.filters.http.header_to_metadata, envoy.filters.http.health_check, envoy.filters.http.ip_tagging, envoy.filters.http.jwt_authn, envoy.filters.http.lua, envoy.filters.http.on_demand, envoy.filters.http.original_src, envoy.filters.http.ratelimit, envoy.filters.http.rbac, envoy.filters.http.router, envoy.filters.http.squash, envoy.filters.http.tap, envoy.grpc_http1_bridge, envoy.grpc_json_transcoder, envoy.grpc_web, envoy.gzip, envoy.health_check, envoy.http_dynamo_filter, envoy.ip_tagging, envoy.lua, envoy.rate_limit, envoy.router, envoy.squash
+[2020-10-09 15:39:46.975][1][info][main] [source/server/server.cc:299]   envoy.compression.compressor: envoy.compression.gzip.compressor
+[2020-10-09 15:39:46.975][1][info][main] [source/server/server.cc:299]   envoy.udp_listeners: raw_udp_listener
+[2020-10-09 15:39:46.975][1][info][main] [source/server/server.cc:299]   envoy.transport_sockets.downstream: envoy.transport_sockets.alts, envoy.transport_sockets.quic, envoy.transport_sockets.raw_buffer, envoy.transport_sockets.tap, envoy.transport_sockets.tls, raw_buffer, tls
+[2020-10-09 15:39:46.975][1][info][main] [source/server/server.cc:299]   envoy.dubbo_proxy.protocols: dubbo
+[2020-10-09 15:39:46.975][1][info][main] [source/server/server.cc:299]   http_cache_factory: envoy.extensions.http.cache.simple
+[2020-10-09 15:39:46.975][1][info][main] [source/server/server.cc:299]   envoy.internal_redirect_predicates: envoy.internal_redirect_predicates.allow_listed_routes, envoy.internal_redirect_predicates.previous_routes, envoy.internal_redirect_predicates.safe_cross_scheme
+[2020-10-09 15:39:46.978][1][warning][misc] [source/common/protobuf/message_validator_impl.cc:21] Deprecated field: type envoy.api.v2.core.GrpcService.GoogleGrpc.CallCredentials.MetadataCredentialsFromPlugin Using deprecated option 'envoy.api.v2.core.GrpcService.GoogleGrpc.CallCredentials.MetadataCredentialsFromPlugin.config' from file grpc_service.proto. This configuration will be removed from Envoy soon. Please see https://www.envoyproxy.io/docs/envoy/latest/version_history/version_history for details. If continued use of this field is absolutely necessary, see https://www.envoyproxy.io/docs/envoy/latest/configuration/operations/runtime#using-runtime-overrides-for-deprecated-features for how to apply a temporary and highly discouraged override.
+[2020-10-09 15:39:46.978][1][info][main] [source/server/server.cc:315] HTTP header map info:
+[2020-10-09 15:39:46.979][1][info][main] [source/server/server.cc:318]   request header map: 496 bytes: :authority,:method,:path,:protocol,:scheme,accept,accept-encoding,access-control-request-method,authorization,cache-control,connection,content-encoding,content-length,content-type,expect,grpc-accept-encoding,grpc-timeout,keep-alive,origin,proxy-connection,referer,te,transfer-encoding,upgrade,user-agent,via,x-client-trace-id,x-envoy-attempt-count,x-envoy-decorator-operation,x-envoy-downstream-service-cluster,x-envoy-downstream-service-node,x-envoy-expected-rq-timeout-ms,x-envoy-external-address,x-envoy-force-trace,x-envoy-hedge-on-per-try-timeout,x-envoy-internal,x-envoy-ip-tags,x-envoy-max-retries,x-envoy-original-path,x-envoy-original-url,x-envoy-retriable-header-names,x-envoy-retriable-status-codes,x-envoy-retry-grpc-on,x-envoy-retry-on,x-envoy-upstream-alt-stat-name,x-envoy-upstream-rq-per-try-timeout-ms,x-envoy-upstream-rq-timeout-alt-response,x-envoy-upstream-rq-timeout-ms,x-forwarded-client-cert,x-forwarded-for,x-forwarded-proto,x-ot-span-context,x-request-id
+[2020-10-09 15:39:46.979][1][info][main] [source/server/server.cc:318]   request trailer map: 72 bytes:
+[2020-10-09 15:39:46.979][1][info][main] [source/server/server.cc:318]   response header map: 352 bytes: :status,access-control-allow-credentials,access-control-allow-headers,access-control-allow-methods,access-control-allow-origin,access-control-expose-headers,access-control-max-age,cache-control,connection,content-encoding,content-length,content-type,date,etag,grpc-message,grpc-status,keep-alive,location,proxy-connection,referer,server,transfer-encoding,upgrade,vary,via,x-envoy-attempt-count,x-envoy-decorator-operation,x-envoy-degraded,x-envoy-immediate-health-check-fail,x-envoy-ratelimited,x-envoy-upstream-canary,x-envoy-upstream-healthchecked-cluster,x-envoy-upstream-service-time,x-request-id
+[2020-10-09 15:39:46.979][1][info][main] [source/server/server.cc:318]   response trailer map: 96 bytes: grpc-message,grpc-status
+[2020-10-09 15:39:46.981][1][info][main] [source/server/server.cc:389] admin address: 0.0.0.0:9901
+[2020-10-09 15:39:46.982][1][info][main] [source/server/server.cc:555] runtime: layers:
+  - name: static_layer_0
+    static_layer:
+      envoy.deprecated_features:envoy.api.v2.Cluster.tls_context: true
+      envoy.deprecated_features:envoy.api.v2.core.GrpcService.GoogleGrpc.CallCredentials.MetadataCredentialsFromPlugin.config: true
+      envoy.deprecated_features:envoy.config.metrics.v2.StatsSink.config: true
+      envoy.deprecated_features:envoy.api.v2.route.RouteMatch.regex: true
+      envoy.deprecated_features:envoy.api.v2.route.HeaderMatcher.regex_match: true
+      envoy.deprecated_features:envoy.api.v2.Cluster.ORIGINAL_DST_LB: true
+      envoy.deprecated_features:envoy.config.filter.network.http_connection_manager.v2.HttpConnectionManager.Tracing.operation_name: true
+      envoy.deprecated_features:envoy.listener.tls_inspector: true
+      envoy.deprecated_features:envoy.api.v2.core.HealthCheck.HttpHealthCheck.use_http2: true
+      envoy.deprecated_features:envoy.api.v2.listener.Filter.config: true
+      envoy.deprecated_features:envoy.reloadable_features.enable_deprecated_v2_api_warning: true
+      envoy.deprecated_features:envoy.api.v2.Cluster.hosts: true
+      envoy.deprecated_features:envoy.listener.original_dst: true
+[2020-10-09 15:39:46.982][1][info][config] [source/server/configuration_impl.cc:103] loading tracing configuration
+[2020-10-09 15:39:46.982][1][info][config] [source/server/configuration_impl.cc:69] loading 0 static secret(s)
+[2020-10-09 15:39:46.982][1][info][config] [source/server/configuration_impl.cc:75] loading 0 cluster(s)
+[2020-10-09 15:39:46.984][1][info][config] [source/server/configuration_impl.cc:79] loading 0 listener(s)
+[2020-10-09 15:39:46.984][1][info][config] [source/server/configuration_impl.cc:129] loading stats sink configuration
+[2020-10-09 15:39:46.984][1][info][runtime] [source/common/runtime/runtime_impl.cc:524] RTDS has finished initialization
+[2020-10-09 15:39:46.984][1][info][upstream] [source/common/upstream/cluster_manager_impl.cc:178] cm init: initializing cds
+[2020-10-09 15:39:46.984][1][warning][main] [source/server/server.cc:537] there is no configured limit to the number of allowed active connections. Set a limit via the runtime key overload.global_downstream_max_connections
+[2020-10-09 15:39:46.985][1][info][main] [source/server/server.cc:652] starting main dispatch loop
+[2020-10-09 15:39:56.896][21][error][aws] [source/extensions/common/aws/credentials_provider_impl.cc:94] Could not retrieve credentials listing from the instance metadata
+[2020-10-09 15:39:57.124][1][warning][config] [bazel-out/k8-opt/bin/source/common/config/_virtual_includes/grpc_stream_lib/common/config/grpc_stream.h:93] StreamAggregatedResources gRPC config stream closed: 16, Missing Authentication Token
+[2020-10-09 15:40:01.499][22][error][aws] [source/extensions/common/aws/credentials_provider_impl.cc:94] Could not retrieve credentials listing from the instance metadata
+[2020-10-09 15:40:01.750][1][warning][config] [bazel-out/k8-opt/bin/source/common/config/_virtual_includes/grpc_stream_lib/common/config/grpc_stream.h:93] StreamAggregatedResources gRPC config stream closed: 16, Missing Authentication Token
+[2020-10-09 15:40:01.986][1][info][upstream] [source/common/upstream/cluster_manager_impl.cc:182] cm init: all clusters initialized
+[2020-10-09 15:40:01.987][1][info][main] [source/server/server.cc:631] all clusters initialized. initializing init manager
+[2020-10-09 15:40:05.910][20][error][aws] [source/extensions/common/aws/credentials_provider_impl.cc:94] Could not retrieve credentials listing from the instance metadata
+[2020-10-09 15:40:06.150][1][warning][config] [bazel-out/k8-opt/bin/source/common/config/_virtual_includes/grpc_stream_lib/common/config/grpc_stream.h:93] StreamAggregatedResources gRPC config stream closed: 16, Missing Authentication Token
+[2020-10-09 15:40:10.340][23][error][aws] [source/extensions/common/aws/credentials_provider_impl.cc:94] Could not retrieve credentials listing from the instance metadata
+[2020-10-09 15:40:10.654][1][warning][config] [bazel-out/k8-opt/bin/source/common/config/_virtual_includes/grpc_stream_lib/common/config/grpc_stream.h:93] StreamAggregatedResources gRPC config stream closed: 16, Missing Authentication Token
+[2020-10-09 15:40:16.988][1][info][config] [source/server/listener_manager_impl.cc:844] all dependencies initialized. starting workers
+[2020-10-09 15:40:22.672][21][error][aws] [source/extensions/common/aws/credentials_provider_impl.cc:94] Could not retrieve credentials listing from the instance metadata
+[2020-10-09 15:40:22.935][1][warning][config] [bazel-out/k8-opt/bin/source/common/config/_virtual_includes/grpc_stream_lib/common/config/grpc_stream.h:93] StreamAggregatedResources gRPC config stream closed: 16, Missing Authentication Token
+[2020-10-09 15:40:34.351][22][error][aws] [source/extensions/common/aws/credentials_provider_impl.cc:94] Could not retrieve credentials listing from the instance metadata
+[2020-10-09 15:40:34.692][1][warning][config] [bazel-out/k8-opt/bin/source/common/config/_virtual_includes/grpc_stream_lib/common/config/grpc_stream.h:93] StreamAggregatedResources gRPC config stream closed: 16, Missing Authentication Token
+[2020-10-09 15:40:56.864][20][error][aws] [source/extensions/common/aws/credentials_provider_impl.cc:94] Could not retrieve credentials listing from the instance metadata
+[2020-10-09 15:40:57.107][1][warning][config] [bazel-out/k8-opt/bin/source/common/config/_virtual_includes/grpc_stream_lib/common/config/grpc_stream.h:93] StreamAggregatedResources gRPC config stream closed: 16, Missing Authentication Token
+^C[2020-10-09 15:41:14.229][1][warning][main] [source/server/server.cc:594] caught SIGINT
+[2020-10-09 15:41:14.229][1][info][main] [source/server/server.cc:711] shutting down server instance
+[2020-10-09 15:41:14.229][1][info][main] [source/server/server.cc:658] main dispatch loop exited
+[2020-10-09 15:41:14.231][1][info][main] [source/server/server.cc:704] exiting
