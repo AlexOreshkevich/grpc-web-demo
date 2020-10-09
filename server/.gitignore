@@ -1,0 +1,11 @@
+# User-specific stuff
+.idea
+*.iml
+*.ipr
+
+build
+gradle
+gradlew
+gradlew.bat
+
+.gradle
