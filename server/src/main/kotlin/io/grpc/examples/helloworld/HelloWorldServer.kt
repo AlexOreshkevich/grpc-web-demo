@@ -49,15 +49,18 @@ class HelloWorldServer constructor(private val port: Int) {
     }
 
     private class HelloWorldService : GreeterGrpcKt.GreeterCoroutineImplBase() {
+
+        var numbersOfResponses = 5
+
         override suspend fun sayHello(request: HelloRequest): HelloReply = HelloReply
             .newBuilder()
             .setMessage("[Custom Kotlin GRPC] ->>> Hello ${request.name}")
             .build()
 
         override fun sayRepeatHello(request: RepeatHelloRequest): Flow<HelloReply> = flow {
-            while (true) {
+            while (--numbersOfResponses > 0) {
                 delay(1000)
-                emit(HelloReply.newBuilder().setMessage("[Custom Kotlin GRPC] Hello, ${request.name}").build())
+                emit(HelloReply.newBuilder().setMessage("[Custom Kotlin streamed GRPC] Hello, ${request.name}").build())
             }
         }
     }
