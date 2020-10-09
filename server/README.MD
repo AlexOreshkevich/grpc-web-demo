@@ -9,6 +9,6 @@ Run `run.sh` should be followed by `Server started, listening on 50051`.
 ## Verify client
 Run
 ```
-./build/install/examples/bin/hello-world-client
+./build/install/server/bin/hello-world-client
 ```
 and you should see `Received: [Custom Kotlin GRPC] ->>> Hello world` message.

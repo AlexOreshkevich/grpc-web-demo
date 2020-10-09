@@ -89,18 +89,6 @@ tasks.register<JavaExec>("HelloWorldClient") {
     main = "io.grpc.examples.helloworld.HelloWorldClientKt"
 }
 
-tasks.register<JavaExec>("RouteGuideServerKt") {
-    dependsOn("classes")
-    classpath = sourceSets["main"].runtimeClasspath
-    main = "io.grpc.examples.routeguide.RouteGuideServerKt"
-}
-
-tasks.register<JavaExec>("RouteGuideClientKt") {
-    dependsOn("classes")
-    classpath = sourceSets["main"].runtimeClasspath
-    main = "io.grpc.examples.routeguide.RouteGuideClientKt"
-}
-
 val helloWorldServerStartScripts = tasks.register<CreateStartScripts>("helloWorldServerStartScripts") {
     mainClassName = "io.grpc.examples.helloworld.HelloWorldServerKt"
     applicationName = "hello-world-server"
@@ -115,23 +103,7 @@ val helloWorldClientStartScripts = tasks.register<CreateStartScripts>("helloWorl
     classpath = tasks.named<CreateStartScripts>("startScripts").get().classpath
 }
 
-val routeGuideServerStartScripts = tasks.register<CreateStartScripts>("routeGuideServerStartScripts") {
-    mainClassName = "io.grpc.examples.routeguide.RouteGuideServerKt"
-    applicationName = "route-guide-server"
-    outputDir = tasks.named<CreateStartScripts>("startScripts").get().outputDir
-    classpath = tasks.named<CreateStartScripts>("startScripts").get().classpath
-}
-
-val routeGuideClientStartScripts = tasks.register<CreateStartScripts>("routeGuideClientStartScripts") {
-    mainClassName = "io.grpc.examples.routeguide.RouteGuideClientKt"
-    applicationName = "route-guide-client"
-    outputDir = tasks.named<CreateStartScripts>("startScripts").get().outputDir
-    classpath = tasks.named<CreateStartScripts>("startScripts").get().classpath
-}
-
 tasks.named("startScripts") {
     dependsOn(helloWorldServerStartScripts)
     dependsOn(helloWorldClientStartScripts)
-    dependsOn(routeGuideServerStartScripts)
-    dependsOn(routeGuideClientStartScripts)
 }
